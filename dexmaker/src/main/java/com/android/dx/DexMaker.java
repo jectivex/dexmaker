@@ -532,6 +532,10 @@ public final class DexMaker {
          * devices, which can't load .dex files directly.
          *
          * TODO: load the dex from memory where supported.
+         *
+         * API level 26 can use dalvik.system.InMemoryDexClassLoader to bypass having to write out to a file and instead load the class bytes directly.
+         *
+         * See: https://developer.android.com/reference/dalvik/system/InMemoryDexClassLoader
          */
 
         JarOutputStream jarOut =
